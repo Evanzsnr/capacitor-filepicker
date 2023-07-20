@@ -8,8 +8,6 @@ import { FilePicker } from '@capawesome/capacitor-file-picker';
 })
 export class HomePage {
 
-  public filename!: string;
-
   constructor() {}
 
   public pickFiles = async () => {
@@ -17,8 +15,6 @@ export class HomePage {
       types: ['application/pdf'],
       multiple: false,
     });
-    this.filename = result.files[0].name;
-    console.log(this.filename);
     console.log(result.files[0]);
   };
 
